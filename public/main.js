@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelector('math-field').
   addEventListener('focus', () => {
-    mathVirtualKeyboard.layouts = ["numeric", "symbols"];
+    mathVirtualKeyboard.layouts = ["numeric", "alphabetic"];
     mathVirtualKeyboard.visible = true;
   });
-  
+
   const salida = document.getElementById('salida-latex');
   const btnGuardar = document.getElementById('guardarMatriz');
   const seleccionador = document.getElementById('seleccionador');

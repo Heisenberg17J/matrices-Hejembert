@@ -10,22 +10,22 @@
     <script src="https://unpkg.com/mathlive"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.5.3/math.js" integrity="sha512-QpBz6wY4qixDKaK8OLULmv64VyRhNDuNP/yuQlx0O/6anqoyvOE4OtJ6bvp/19/6FUq/wXa8LLvYGNCzNXMH0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<body class="dark-theme">
+<body>
     <video muted autoplay loop>
         <source src="/img/math-background.mp4" type="video/mp4">
             Tu navegador no soporta el formato de video.
     </video>
     <header>
-        <div class="container theme-dark">
+        <div class="container">
             <h2 class="title is-1 columns is-centered theme-dark">Matrices</h2>
-            <div class="columns is-centered theme-dark">
+            <div class="columns is-centered">
                 <img class="logo" src="/img/logo-hW.png" alt="matriz-logo">
                 <p class="subtitle is-3 theme-dark">Comprueba tus ejercicios</p>
             </div>
         </div>
     </header>  
-    <section class="container form section theme-dark">
-        <h3 class="title is-3">Introduce tu matriz</h3>
+    <section class="container form section">
+        <h3 class="title is-3 theme-dark">Introduce tu matriz</h3>
         <div class="box theme-dark">
             <form id="matriz-form">
                 <div class="entrada-form">
@@ -43,8 +43,8 @@
                         </div>
                     </div>
 
-                    <div class="field theme-dark">
-                        <h4>Introduce las ecuaciones</h4>
+                    <div class="field">
+                        <h4 class="theme-dark">Introduce las ecuaciones</h4>
                         <div id="error-entrada"hidden>
                             
                         </div>
@@ -58,7 +58,7 @@
 
                 </div>
                 <div class="resultados">
-                    <p class="subtitle is-3 matriz-titulo theme-dark">Forma matricial</p>
+                    <p class="subtitle is-3 matriz-titulo">Forma matricial</p>
                     <div>
                         <div class="matriz-visual">
                             <div id="salida-latex" style="min-height:8em">
@@ -73,7 +73,7 @@
         </div>
     </section>
     <section id="procedimiento" class="procedimiento section is-medium" hidden>
-        <h3 class="title is-3 columns is-centered">Explicacion</h3>
+        <h3 class="title is-3 columns is-centered theme-dark">Explicacion</h3>
         <div class="box is-medium theme-dark">
             <div class="content-box">
 

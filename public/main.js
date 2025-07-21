@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnProcedimiento = document.getElementById("btn-procedimiento");
   const divProcedimiento= document.getElementById("div-procedimiento");
 
-  mathField.setOptions({ virtualKeyboardMode: 'off' });
+  mathField.readOnly = true;
 
   mathField.addEventListener('keydown', handleKeyDown);
   btnGuardar.addEventListener('click', handleGuardarMatriz);

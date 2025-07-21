@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrices - Hejembert</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://unpkg.com/mathlive"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.5.3/math.js" integrity="sha512-QpBz6wY4qixDKaK8OLULmv64VyRhNDuNP/yuQlx0O/6anqoyvOE4OtJ6bvp/19/6FUq/wXa8LLvYGNCzNXMH0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body class="dark-theme">
+    <video muted autoplay loop>
+        <source src="/img/math-background.mp4" type="video/mp4">
+            Tu navegador no soporta el formato de video.
+    </video>
+    <header>
+        <div class="container theme-dark">
+            <h2 class="title is-1 columns is-centered theme-dark">Matrices</h2>
+            <div class="columns is-centered theme-dark">
+                <img class="logo" src="/img/logo-hW.png" alt="matriz-logo">
+                <p class="subtitle is-3 theme-dark">Comprueba tus ejercicios</p>
+            </div>
+        </div>
+    </header>  
+    <section class="container form section theme-dark">
+        <h3 class="title is-3">Introduce tu matriz</h3>
+        <div class="box theme-dark">
+            <form id="matriz-form">
+                <div class="entrada-form">
+                    <div class="field drop-center">
+                        <h4 class="subtitle is-5 theme-dark">Operación a realizar</h4>
+                        <div class="select is-small">
+                            <select id="seleccionador">
+                                <option value="default">Opciones</option>
+                                <option value="gauss-jordan">Gauss-Jordan</option>
+                                <option value="triangular-s">Triangular Sup</option>
+                                <option value="triangular-inf">Triangular Inf</option>
+                                <option value="inversa">Inversa</option>
+                                <option value="determinante">Determinante</option>  
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field theme-dark">
+                        <h4>Introduce las ecuaciones</h4>
+                        <div id="error-entrada"hidden>
+                            
+                        </div>
+                        <div class="entrada-container">
+                            <math-field id="math-entrada" placeholder='$$\displaylines{3x-2y=2\\ 4x+y=1} $$'></math-field>
+                            <div class="btn-center">
+                                <button type="button" class="button is-dark" id="guardarMatriz">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="resultados">
+                    <p class="subtitle is-3 matriz-titulo theme-dark">Forma matricial</p>
+                    <div>
+                        <div class="matriz-visual">
+                            <div id="salida-latex" style="min-height:8em">
+                            </div>
+                            <div class="btn-procedimiento" id="div-procedimiento" hidden>
+                                <button class="button is-light is-rounded" id="btn-procedimiento" type="button">ver procedimiento</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="procedimiento" class="procedimiento section is-medium" hidden>
+        <h3 class="title is-3 columns is-centered">Explicacion</h3>
+        <div class="box is-medium theme-dark">
+            <div class="content-box">
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer theme-dark">
+        <div class="content has-text-centered">
+            <p>
+            <strong>Powered By</strong><a href="https://hejembert.vercel.app/"> Hejembert Jaramillo</a>.
+            <br>Esta pagina es de uso libre
+            Version 2025 02
+            </p>
+        </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>

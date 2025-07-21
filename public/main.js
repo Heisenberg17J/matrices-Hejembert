@@ -8,6 +8,13 @@ import {operacionSeleccionada} from "./modules/operaciones.js"
 
 document.addEventListener('DOMContentLoaded', () => {
   const mathField = document.getElementById('math-entrada');
+
+  document.querySelector('math-field').
+  addEventListener('focus', () => {
+    mathVirtualKeyboard.layouts = ["numeric", "symbols"];
+    mathVirtualKeyboard.visible = true;
+  });
+  
   const salida = document.getElementById('salida-latex');
   const btnGuardar = document.getElementById('guardarMatriz');
   const seleccionador = document.getElementById('seleccionador');
@@ -16,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnProcedimiento = document.getElementById("btn-procedimiento");
   const divProcedimiento= document.getElementById("div-procedimiento");
 
-  mathField.readOnly = true;
 
   mathField.addEventListener('keydown', handleKeyDown);
   btnGuardar.addEventListener('click', handleGuardarMatriz);
